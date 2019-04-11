@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Applications/Genymotion.app/Contents/MacOS/tools/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Genymotion.app/Contents/MacOS/tools/:/Users/ocean/Downloads/soft/flutter/bin:/Users/ocean/Downloads/soft/flutter/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.11.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.npm.taobao.org registry.npm.taobao.org:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+
+npm manifest: 
+  {
+    "devDependencies": {
+      "babel-core"             : "^6.26.3",
+      "babel-loader"           : "^7.1.5",
+      "babel-preset-env"       : "^1.7.0",
+      "babel-preset-react"     : "^6.24.1",
+      "babel-preset-stage-0"   : "^6.24.1",
+      "css-loader"             : "^2.1.1",
+      "html-loader"            : "^0.5.5",
+      "html-webpack-plugin"    : "^3.2.0",
+      "mini-css-extract-plugin": "^0.5.0",
+      "webpack"                : "^4.29.6",
+      "webpack-cli"            : "^3.3.0",
+      "webpack-dev-server"     : "^3.2.1"
+    },
+    "name"   : "react-webpack",
+    "version": "1.0.0",
+    "main"   : "index.js",
+    "scripts": {
+      "build": "webpack --mode production",
+      "dev"  : "webpack-dev-server --mode development --open",
+      "test" : "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords"    : [],
+    "author"      : "",
+    "license"     : "ISC",
+    "description" : "",
+    "dependencies": {
+      "axios"           : "^0.18.0",
+      "react"           : "^16.8.6",
+      "react-dom"       : "^16.8.6",
+      "react-router"    : "^4.3.1",
+      "react-router-dom": "^4.3.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

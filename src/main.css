@@ -1,0 +1,29 @@
+/* 首页产品 */
+*{margin: 0;padding: 0}
+
+.chanpin-ul{
+    border:1px solid black;
+    overflow: hidden;
+    text-align: center;
+}
+.chanpin-ul .chanpin{
+    margin: 0 auto;
+    width: 25%;
+    border:1px solid red;
+    list-style: none;
+    float: left;
+}
+
+.chanpin .title,.image{
+    text-align: center;
+}
+.chanpin .text{
+    margin: 0 auto;
+    width: 90%;
+    border: 1px solid black;
+    height:20px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
