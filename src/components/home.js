@@ -3,9 +3,10 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { fetchList,addToCart } from '../actions';
 import { fetchLists } from '../actions/news';
-import ListItem from './listitme';
-import NewsList from './newsList';
+import HomeList from './homelist';
+import HomeNews from './hoemNews';
 import style from '../main.css';
+import Homenews from '../Homenews.css';
 
 //3.现在有了一个仓库  仓库里有了初始值   将状态转换成属性
 const mapStateToProps = (state)=>{
@@ -32,9 +33,13 @@ class Home extends React.Component{
              return <li>暂无数据</li>;
          }
          var jsx = [];
-         for(let i = 0;i<lists.length;i++){
-             jsx.push(<ListItem key={i} product={lists[i]} addToCart={this.props.addToCart}/>);
-         }
+         if(lists.length==0){
+            return <li>暂无数据</li>
+        }else{
+            for(let i = 0;i<4;i++){
+                jsx.push(<HomeList key={i} product={lists[i]} addToCart={this.props.addToCart}/>);
+            }
+        }
          return jsx;
      }
      showLists(){
@@ -48,7 +53,7 @@ class Home extends React.Component{
             return <li>暂无数据</li>
         }else{
             for(let i = 0;i<4;i++){
-                jsx.push(<NewsList key={i} product={listsNews[i]}/>);
+                jsx.push(<HomeNews key={i} product={listsNews[i]}/>);
             }
         }
         return jsx;
@@ -107,7 +112,7 @@ class Home extends React.Component{
                     </div>
                     <div className="col-md-12">
                         <h3>新闻内容</h3>
-                        <ul className='chanpin-ul' style={{style}}>
+                        <ul className='Homenews-ul' style={{Homenews}}>
                             {this.showLists()}
                         </ul>
 

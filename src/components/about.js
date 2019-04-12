@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { fetchLists } from '../actions/news';
 import NewsList from './newsList';
-
+import style from '../main.css';
 //3.现在有了一个仓库  仓库里有了初始值   将状态转换成属性
 const mapStateToProps = (state)=>{
     return    {
@@ -17,23 +17,23 @@ const mapStateToProps = (state)=>{
 class About extends Component{
 
 
-    // ChangePage = (page)=>{
-    //    this.props.fetchLists({page:page});
-    // }
+    ChangePage = (page)=>{
+       this.props.fetchLists({page:page});
+    }
 
-    // showPageList(){
+    showPageList(){
 
-    //     var jsx = [];
-    //     if(this.props.total>0){
-    //         var total = this.props.total / 10;
-    //         for(let i=1;i<=total;i++){
-    //             jsx.push(
-    //                 <li key={i}><a onClick={()=>this.ChangePage(i)}>{i}</a></li>
-    //                 )
-    //         }
-    //     }
-    //     return jsx;
-    // }
+        var jsx = [];
+        if(this.props.total>0){
+            var total = this.props.total / 10;
+            for(let i=1;i<=total;i++){
+                jsx.push(
+                    <li key={i}><a onClick={()=>this.ChangePage(i)}>{i}</a></li>
+                    )
+            }
+        }
+        return jsx;
+    }
 
     showList(){
         var lists = this.props.lists;
@@ -51,11 +51,11 @@ class About extends Component{
     render(){
         return(
             <div>
-                <ul className='news'>
+                <ul className='news' style={style}>
                     {this.showList()}
                 </ul>
                 <br/>
-                {/*<nav aria-label="Page navigation">
+                <nav aria-label="Page navigation">
                     <ul className="pagination">
                         <li>
                             <a href="#" aria-label="Previous">
@@ -69,7 +69,7 @@ class About extends Component{
                             </a>
                         </li>
                     </ul>
-        </nav>*/}
+                </nav>
             </div>
         )
     }

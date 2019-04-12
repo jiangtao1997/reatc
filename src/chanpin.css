@@ -1,0 +1,23 @@
+.counter{
+    border:1px solid black;
+    overflow: hidden;
+    text-align: center;
+    height: 350px;
+}
+.counter .counter-li{
+    margin: 0 auto;
+    width: 25%;
+    border:1px solid red;
+    list-style: none;
+    float: left;
+    height: 100%;
+}
+
+.counter .text{
+    margin: 0 auto;
+    width: 90%;
+    height:50px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}

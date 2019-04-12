@@ -1,29 +1,66 @@
 /* 首页产品 */
 *{margin: 0;padding: 0}
 
-.chanpin-ul{
+/* 产品和新闻在home里边的样式 */
+.chanpin-ul,.news-ul{
     border:1px solid black;
     overflow: hidden;
     text-align: center;
+    height: 350px;
 }
-.chanpin-ul .chanpin{
+.chanpin-ul .chanpin,.news-ul .news-li{
     margin: 0 auto;
     width: 25%;
     border:1px solid red;
     list-style: none;
     float: left;
+    height: 100%;
 }
+
 
 .chanpin .title,.image{
     text-align: center;
 }
-.chanpin .text{
+.chanpin .text,.news-li .text{
     margin: 0 auto;
     width: 90%;
-    border: 1px solid black;
-    height:20px;
+    height:50px;
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
 }
 
+/* 新闻的详情样式 */
+
+.xiangqing{
+    width: 85%;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+/* 新闻的样式 */
+.news{
+    width: 85%;
+    margin: 20px auto;
+}
+.news .news-li{
+    margin: 20px;
+    list-style: none;
+}
+
+
+/* 购买 */
+
+.goumai{
+    width: 85%;
+    margin: 20px auto;
+}
+.goumai .goumai-li{
+    list-style:none;
+}
+.goumai .goumai-li tr{
+    margin-left:20px;
+}
+.goumai .goumai-li th{
+    margin-left:20px;
+}

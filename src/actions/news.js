@@ -8,9 +8,9 @@ export const getListData = (data)=>{
 }
 
 
-export function fetchLists(){
+export function fetchLists(params = {page:1}){
     return dispatch=>{
-        var url = `http://localhost:3000/news`;
+        var url = `http://localhost:3000/news?_page=${params.page}&_limit=10&_sort=Id&_order=desc`;
         return axios({
             url:url,
             method:'post'

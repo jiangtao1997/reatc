@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
-
+import style from '../main.css';
 
 const mapStateToProps = state=>{
     return {
@@ -29,28 +29,42 @@ class Carts extends Component{
 
     getCarts(){
         var Carts = this.props.carts;
+        console.log(this.props.carts+'getCarts');
         if(!Carts){
             return <li key={i}>暂无数据</li>;
         }
         var jsx = [];
         for(let i=0;i<Carts.length;i++){
             jsx.push(
-                    <li key={i}>
-                        产品样式：<img src={Carts[i].image}/>
-                        <br/>
-                        产品名称：{Carts[i].name}
-                        <br/>
-                        产品价格：{Carts[i].star.number}
-                        <br/>
-                        产品介绍：{Carts[i].text}
-                        <br/>
-                        购买数量：{Carts[i].quantity}
-                        <br/>
-                        价钱小计：{Carts[i].subTotal}
-                        <br/>
-                        <button className="btn btn-primary" data-toggle="button" onClick={()=>this.Delete(Carts[i].id)}>
-                        删除
-                        </button>
+                    <li key={i} className='goumai-li'>
+                        <div className="row carts">
+                            <div className="col-md-8 carts-img"><img src={Carts[i].image}/></div>
+                            <div className="col-md-4">
+                                <table>
+                                <tbody>
+                                    <tr>
+                                        <th>产品名称</th>
+                                        <th>产品名称</th>
+                                        <th>产品名称</th>
+                                        <th>产品名称</th>
+                                        <th>删除商品</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{Carts[i].name}</td>
+                                        <td>{Carts[i].star.number}</td>
+                                        <td>{Carts[i].quantity}</td>
+                                        <td>{Carts[i].subTotal}</td>
+                                        <td>
+                                            <button className="btn btn-primary" data-toggle="button" onClick={()=>this.Delete(Carts[i].id)}>
+                                            删除
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
                     </li>
                 );
         }
@@ -60,7 +74,8 @@ class Carts extends Component{
     render(){
         return(
             <div>
-                {this.getCarts()}
+                <ul className='goumai' style={style}>{this.getCarts()}</ul>
+
             </div>
         )
     }

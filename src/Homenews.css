@@ -1,0 +1,8 @@
+.Homenews-ul{
+    width: 85%;
+    margin: 20px auto;
+}
+.Homenews-ul li{
+    margin-top: 20px;
+    list-style: none;
+}

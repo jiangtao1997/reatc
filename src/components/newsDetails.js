@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import axios from "axios";
 import {connect} from 'react-redux';
+import style from '../main.css';
 const mapStateToProps = (state)=>{
     return {
         cart: state.cart
@@ -33,13 +34,14 @@ class NewsDetail extends Component{
         var liData=this.state.list;
         return(
             <div>
-                Detail:<br/>
-                <div style={{position:'relative'}}>
-                    <img src={liData.image}/>
-                    <button href="javascript:" className="btn btn-primary btn-lg active" style={{position:"absolute",right:0,top:0}}>评论</button>
-                    <br/>
-                    {liData.title}<br/>
-                    {liData.text}
+                <div className="row xiangqing" style={{style}}>
+                    <div className="col-md-6 xiangqing-img"><img src={liData.image}/></div>
+                    <div className="col-md-6">
+                        <h2>{liData.title}</h2>
+                        <p>{liData.text}</p>
+                        <p>{liData.data}</p>
+                        <button href="javascript:" className="btn btn-primary btn-lg active">评论</button>
+                    </div>
                 </div>
             </div>
         )

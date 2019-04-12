@@ -4,7 +4,7 @@ import {NavLink}from 'react-router-dom'
 
 
 
-const NewsList = (props)=>{
+const HomeNews = (props)=>{
     var PeopleDetails = `/newsDetails/${props.product.id}`;
     const {title,image,text} = props.product;
     return (
@@ -21,4 +21,4 @@ const NewsList = (props)=>{
     )
 }
 
-export default NewsList;
+export default HomeNews;

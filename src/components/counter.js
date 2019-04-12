@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { fetchList,addToCart } from '../actions';
 import ListItem from './listitme';
-
+import chanpin from '../chanpin.css';
 //3.现在有了一个仓库  仓库里有了初始值   将状态转换成属性
 const mapStateToProps = (state)=>{
     return    {
@@ -52,7 +52,8 @@ class Counter extends Component{
         const {fetchList,lists,carts,addToCart} = this.props;
         return(
             <div>
-                {this.showList()}
+                <ul className='counter' style={chanpin}>{this.showList()}</ul>
+
                 <br/>
                 {/*<nav aria-label="Page navigation">
                     <ul className="pagination">

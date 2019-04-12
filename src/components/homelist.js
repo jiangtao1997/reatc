@@ -4,11 +4,11 @@ import {NavLink}from 'react-router-dom'
 
 
 
-const ListItem = (props)=>{
+const HomeList = (props)=>{
     var PeopleDetails = `/details/${props.product.id}`;
     const {name,image,text} = props.product;
     return (
-        <li className='counter-li'>
+        <li className='chanpin'>
             <p>{name}</p>
             <p><img src={image}/></p>
             <p className='text'>{text}</p>
@@ -17,4 +17,4 @@ const ListItem = (props)=>{
     )
 }
 
-export default ListItem;
+export default HomeList;
