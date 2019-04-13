@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add jsonwebtoken -S
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Study\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\PuTTY\;C:\Ruby23-x64\bin;C:\Users\ZYZ\AppData\Local\Microsoft\WindowsApps;C:\Users\ZYZ\AppData\Roaming\npm;C:\Users\ZYZ\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ZYZ\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\ZYZ\AppData\Local\Yarn\Cache\v4\npm-statuses-1.5.0-161c7dac177659fd9811f43771fa99381478628c\node_modules\statuses\codes.json' -> 'E:\three\admin-react\node_modules\body-parser\node_modules\statuses\codes.json'
+
+npm manifest: 
+  {
+    "name": "admin",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "nodemon ./bin/www"
+    },
+    "dependencies": {
+      "cookie-parser": "~1.4.3",
+      "cors": "^2.8.5",
+      "debug": "~2.6.9",
+      "ejs": "~2.5.7",
+      "express": "~4.16.0",
+      "http-errors": "^1.6.3",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.4.18",
+      "mongoose-materialized": "^0.2.0",
+      "mongoose-paginate": "^5.0.3",
+      "morgan": "~1.9.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
