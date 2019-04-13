@@ -23,7 +23,7 @@ export const getListData = (data)=>{
 
 export function fetchList(){
     return dispatch=>{
-        var url = `http://localhost:3000/counter`;
+        var url = `http://129.204.206.178:3000/counter`;
         return axios({
             url:url,
             method:'post'

@@ -18,7 +18,7 @@ class NewsDetail extends Component{
 
     componentDidMount(){
         axios({
-            url:`http://localhost:3000/news/${this.props.match.params.id}`,
+            url:`http://129.204.206.178:3000/news/${this.props.match.params.id}`,
             method:'get'
         }).then(res=>{
             console.log(res.data);

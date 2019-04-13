@@ -15,26 +15,6 @@ const mapStateToProps = (state)=>{
 
 //创建组件
 class Counter extends Component{
-
-
-    // ChangePage = (page)=>{
-    //    this.props.fetchList({page:page});
-    // }
-
-    // showPageList(){
-
-    //     var jsx = [];
-    //     if(this.props.total>0){
-    //         var total = this.props.total / 10;
-    //         for(let i=1;i<=total;i++){
-    //             jsx.push(
-    //                 <li key={i}><a onClick={()=>this.ChangePage(i)}>{i}</a></li>
-    //                 )
-    //         }
-    //     }
-    //     return jsx;
-    // }
-
     showList(){
         var lists = this.props.lists;
         if(!lists){
@@ -53,23 +33,6 @@ class Counter extends Component{
         return(
             <div>
                 <ul className='counter' style={chanpin}>{this.showList()}</ul>
-
-                <br/>
-                {/*<nav aria-label="Page navigation">
-                    <ul className="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        {this.showPageList()}
-                        <li>
-                            <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-        </nav>*/}
             </div>
         )
     }
